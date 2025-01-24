@@ -3,7 +3,7 @@ const sendBtn = document.querySelector(".input-container button");
 const messageBox = document.querySelector(".messages");
 
 let API_URL = "https://gemini-api.google.dev/v1/text:generate"; // Updated to Gemini API
-let API_KEY = "AIzaSyCYdNdmbMULcWLUpXioeUfK5_VQCZR3o-o"; // Replace with your Gemini API Key
+let API_KEY = ; // Replace with your Gemini API Key
 
 sendBtn.onclick = function () {
     if (messageBar.value.length > 0) {
