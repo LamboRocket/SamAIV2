@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    height: 100vh;
+    /* Full viewport height */
+    display: flex;
+    /* Use Flexbox */
+    align-items: center;
+    /* Vertically center */
+    justify-content: center;
+    /* Horizontally center */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+    transition: background-color 0.5s;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.button .ball {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+    transition: left 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #161616;
+}
+
+.button.dark-mode {
+    background-color: #333;
+}
+
+.button.dark-mode .ball {
+    left: 32px;
+}
+
+.chat-container {
+    max-width: 600px;
+    width: 100%;
+    /* Ensure it adapts to smaller screens */
+    height: 80%;
+    /* Make it take up 80% of the viewport height */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    /* Stack the messages and input */
+    padding: 20px;
+}
+
+.messages {
+    flex: 1;
+    /* Take up available space */
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    /* Optional: Add a border for better visual separation */
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fafafa;
+    /* Light background for messages area */
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.user {
+    background-color: #161616;
+    color: white;
+    align-self: flex-end;
+    text-align: end;
+    border-radius: 100px;
+}
+
+.ai {
+    background-color: #e8e8e8;
+    border-radius: 100px;
+}
+
+.input-container {
+    display: flex;
+}
+
+.input-container input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.input-container input:focus {
+    outline: none;
+}
+
+.input-container .send-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #161616;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #161616;
+    transition: background-color 0.5s, color 0.5s, border 0.5s;
+}
+
+.input-container .send-button:hover {
+    background-color: white;
+    color: #161616;
+    border: 1px solid #161616;
+}
+
+::-webkit-scrollbar {
+    width: 100%;
+    /* Width of vertical scrollbar */
+    height: 100%;
+    /* Height of horizontal scrollbar */
+}
